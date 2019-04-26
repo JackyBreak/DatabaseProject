@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<body>
+    <table border=1>
+        <thead>
+        <td>Departure City</td>
+        <td>Arrival City</td>
+        <td>Departure Time</td>
+        <td>Arrival Time</td>
+        <td>Aircraft Id</td>
+        <td>Remaining number of Seats</td>
+        <td>Options</td>
+        </thead>
+        {% for row in rows %}
+        <tr>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <form action="/selectFlights" method="POST"><td><button name="flight_id" value="{{row[0]}}" type="submit">Select</button></td></form>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+<br>
+{{msg}}
+
+</body>
+</html>

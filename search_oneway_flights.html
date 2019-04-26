@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BookingPage</title>
+	<style type="text/css">
+		.banner{
+			margin-left: 33%;
+			margin-top: 100px;
+			height: 250px;
+			width: 600px;
+			border: dashed gray 0.5px;
+		}
+		.banner{
+			padding-top: 20px;
+		}
+		b{
+			margin:50px 15px;
+		}
+		input{
+			height:25px;
+			width: 150px;
+			margin-right: 40px;
+			margin-bottom: 50px;
+		}
+		a{
+			color: black;
+			text-decoration: none;
+			size: 15px;
+		}
+		button{
+			margin-left: 470px;
+			height: 45px;
+			width: 100px;
+
+		}
+		button:hover{
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<form action="http://localhost:5000/searchOneWayFlights" method="POST" enctype="multipart/form-data">
+			<b>From:</b>
+			<input type="text" name="From" placeholder="  Enter Airport Name">
+			<b>To:</b>
+			<input type="text" name="To" placeholder="  Enter Airport Name">
+			<br>
+			<b>Departure Date:</b>
+			<input type="text" name="DepartureDate" placeholder="  YYYY/MM/DD">
+			<br>
+			<input type="submit" value="Search">
+		</form>
+	</div>
+</body>
+</html>

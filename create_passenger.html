@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PassengerInformation</title>
+	<style type="text/css">
+		.P1{
+			border-bottom: dashed gray 0.5px;
+			height: 200px;
+			width: 100%;
+		}
+		input{
+			margin-right:20px;
+		}
+		button{
+			height: 45px;
+			width: 100px;
+			margin-top: 30px;
+			margin-left: 70%;
+		}
+		a{
+			font-size: 15px;
+			text-decoration: none;
+			color: black;
+		}
+
+		.botton{
+		    margin-top: 30px;
+		    margin-left: 79.44%;
+		}
+
+	</style>
+</head>
+<body>
+<form action="http://localhost:5000/addPassenger" method="POST" enctype="multipart/form-data">
+	<div class="P1">
+		<h2>Passenger Information</h2><br>
+			<b>First Name:</b>
+			<input type="text" name="FirstName">
+			<b>Last Name:</b>
+			<input type="text" name="LastName">
+			<b>Date Of Birth</b>
+			<input type="text" name="DateOfBirth" placeholder="  YYYY-MM-DD">
+			<b>Gender</b>
+			<input type="text" name="Gender">
+            <b>Country</b>
+            <input type="text" name="Country">
+            <br>
+            <input type="submit" value = "Add this Passenger" class="botton">
+	</div>
+	{{msg}}
+</form>
+</body>
+</html>

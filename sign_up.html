@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SIGNUP PAGE</title>
+	<style type="text/css">
+		div{
+			border-bottom: dashed 0.5px gray;
+			width: 100%;
+			height: 225px;
+		}
+		h2{
+			margin-left: 5px;
+		}
+
+		form{
+
+		}
+
+		b{
+
+		}
+		input{
+			margin-top: 3px;
+			height: 20px;
+			margin-right: 20px;
+			margin-bottom: 30px;
+			color: black;
+		}
+		.button{
+			margin:100px 150px;
+			height: 50px;
+			width: 160px;
+			background-color: black;
+			color:white;
+		}
+		.button:hover{
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+<form action="http://localhost:5000/addUser" method="POST" enctype="multipart/form-data">
+	<div class="top">
+		<h2>Personal Information</h2><br>
+			<b>First Name:</b>
+			<input type="text" name="FirstName">
+			<b>Last Name:</b>
+			<input type="text" name="LastName">
+			<b>Date Of Birth:</b>
+			<input type="text" name="DateOfBirth" placeholder="  MM/DD/YYYY">
+			<b>Gender</b>
+			<input type="text" name="Gender">
+	</div>
+	<div class="middle">
+		<h2>Contact Information</h2><br>
+			<b>Country:</b>
+			<input type="text" name="Country">
+			<b>State:</b>
+			<input type="text" name="State">
+			<b>City:</b>
+			<input type="text" name="City">
+			<b>Address 1:</b>
+			<input type="text" name="Address1">
+			<br>
+			<b>Address 2:</b>
+			<input type="text" name="Address2">
+			<b>ZIP Code:</b>
+			<input type="text" name="ZIPCode">
+	</div>
+	<div class="bottom">
+		<h2>Account Information</h2><br>
+			<b>Email:</b>
+			<input type="text" name="Email">
+			<b>User Name: </b>
+			<input type="text" name="UserName">
+			<b>Password:</b>
+			<input type="text" name="Password">
+	</div>
+	<div>
+
+		<input type="submit" value = submit class="button">
+
+	</div>
+	<div>
+		{{msg}}
+	</div>
+	</form>
+
+</body>
